@@ -1,0 +1,220 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: rgb(246, 235, 237);
+}
+
+.logo{
+    display:flex;
+    height: 160px;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    justify-content: center;
+    
+}
+.menu{
+    display: flex;
+    font-family:'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: large;
+    list-style: none;
+    justify-content: space-around;
+    margin-bottom: 1%;
+    animation: animate__backInLeft;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+ 
+}
+
+a{
+    color:rgb(80, 80, 241);
+    text-decoration: none;
+}
+.grilla{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 400px 300px 200px;
+    grid-template-areas: "fondo fondo fondo fondo"
+                         "segunda segunda tercera tercera"
+                         "footer footer footer footer";
+}
+.imagenFondo{    
+    grid-area: fondo;
+    height: 100%;
+    width: 100%;
+}
+.imagenFondoRelleno{
+    grid-area:segunda;
+    width: 100%;
+    height: 300px;
+}
+.imagenFondo__Relleno2{
+    grid-area:tercera;
+
+}
+.grilla__div{
+    grid-area: footer;
+    width: 100%;
+    height:100%;
+}
+.textoMainTitulo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    color: rgb(80, 80, 241);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.textoMainParrafo{
+    font-weight: bolder;
+    text-align: justify;
+    line-height: 1.5;
+    margin-left: 5px;
+    margin-right: 5px;
+    grid-area: footer;
+    height: 90%;
+    width: 99%;
+}
+
+.formularioEmail{
+    background-color: rgb(80, 80, 241);
+    border: 1px solid black;
+    width: 1345px;
+    height: 70px;
+    position: relative;
+}
+.formularioEmailTexto{
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+    display: inline-block;
+    margin-top: 20px;
+    padding-left: 400px;
+}
+.formularioEmailInput{
+    width: 20%;
+    height: 20px;
+}
+.formularioEmailButton{
+    width: 50px;
+    height: 25px;
+    font-weight: bolder;
+}
+h4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    display: inline-block;
+}
+p{
+    font-family:'Roboto', sans-serif;
+    font-size: medium;
+    font-weight: 500;
+}
+.contacto{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 40px  25px  25px 25px;
+    grid-template-areas: "Pago  direccion   contacto"
+                         "Pago  direccion   contacto"
+                         "Pago  direccion   contacto"
+                         "Pago  direccion   contacto";
+
+}
+.mediosDePago{
+    grid-area: Pago;
+    margin-left: 15%;
+}
+.mediosDeContacto{
+    grid-area: direccion;
+    margin-left: 25%;
+}
+.redesSociales{
+    grid-area: contacto;
+    margin-left: 50%;
+}
+
+.perfil{
+    display: grid;
+    border: 2px solid black;
+    margin-bottom: 5px;
+    margin-left: 15%;
+    height: 252px;
+    width: 950px;
+    grid-template-columns: 380px 450px;
+    grid-template-rows: 100px 200px;
+    grid-template-areas: "foto nombre"
+                         "foto texto";
+
+}
+.perfilFoto{
+    width: 350px;
+    height: 250px;
+    border:1px solid black;
+    grid-area: foto;
+    
+}
+.perfilFoto__Nosotros{
+    transition: height 2s, width 1s;
+}
+
+.perfilFoto__Nosotros:hover{
+    height: 350px;
+    width: 500px;
+    margin-top: -70px;
+    position:absolute;
+    animation-name: rotador;
+    animation-duration: 2s;
+    animation-iteration-count: static;
+}
+.perfilTitulo{
+    color: rgb(80, 80, 241);
+    margin-left: 50%;
+    margin-top: 75px;
+    grid-area: nombre; 
+}   
+.perfilTexto{
+    text-align: justify;
+    margin-left: 25%;
+    grid-area: texto;
+}
+.perfilTitulo__Servicios{
+    margin-left: 40%;
+}
+.galeria{
+    margin-left: 40px;
+    
+}
+.galeriaFoto{
+    width: 300px;
+    height: 235px;
+    margin-bottom: 10px;
+    border:1px solid black;
+}
+
+.contactoTitulo{
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    color:rgb(32, 32, 32);
+    margin-bottom: 5px;
+}
+.formParrafo{
+    font-weight: 600;
+}
+
+
+@keyframes rotador{
+
+    from{
+        
+        transform:rotate(180deg);
+    }
+    to{
+      
+        transform:rotate(360deg);
+    }
+}
